@@ -5,26 +5,107 @@
 
 .item {
   height: 15rem;
-  width: 10rem;
-  box-shadow: 1px 1px 10px gray;
-  margin: 0 1rem;
-  opacity: 0.5;
+  width: 20rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 0 3rem;
+  opacity: 0.4;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: linear-gradient(to right bottom, black, transparent);
+  position: relative;
 }
 
-.centered {
+.info {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.desc {
+  color: #ffffffa3;
+  font-size: 0.5rem;
+}
+
+.category {
+  background-color: white;
+  color: black;
+  font-size: 0.4rem;
+  position: absolute;
+  top: 10;
+  left: 10;
+  margin: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.price {
+  color: orange;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.item.centered {
   z-index: 1;
   background-color: aqua;
-  animation: scaleItem 1s ease-in;
-  animation-fill-mode: both;
+  animation: scaleItem 2s ease-in;
+  animation-fill-mode: forwards;
   opacity: 1;
-  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  transition: all 1s;
+  /* animation-iteration-count: infinite; */
 }
 
+.item:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+  cursor: pointer;
+  /* animation: none; */
+}
+.leftItem:hover {
+  /* animation: leftItemAnimation 2s ease-in-out; */
+}
+
+.priceCtr {
+  display: flex;
+  align-items: baseline;
+}
+
+.rating {
+  font-size: 0.3rem;
+  margin-left: 0.8rem;
+}
+
+.ratingDesc {
+  color: #ffffffa3;
+}
+
+.empty {
+  height: 15rem;
+  width: 20rem;
+  margin: 0 3rem;
+}
+.image {
+  height: 15rem;
+  width: 20rem;
+  overflow: hidden;
+}
 .arrow {
   font-size: 4em;
-  opacity: 0.3;
+  opacity: 0.2;
   cursor: pointer;
   margin: 0 3rem;
+  font-weight: bold;
 }
 
 @keyframes scaleItem {
@@ -32,6 +113,16 @@
     transform: scale(1);
   }
   to {
-    transform: scale(1.5);
+    transform: scale(2);
+  }
+}
+
+@keyframes leftItemAnimation {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(120%) scale(2);
+    opacity: 1;
   }
 }

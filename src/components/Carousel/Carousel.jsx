@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Carousel.module.css";
-import mockData from "./../../mock/mock-data";
+import CarouselItem from "./CarouselItem";
+import CarouselMain from "./CarouselMain";
 
 function Carousel({ list }) {
   const [currentItem, setCurrentItem] = useState(1);
+  const [dataList, setDatalist] = useState(list);
+  const TOTAL_ITEMS = dataList.length;
 
-  const TOTAL_ITEMS = list.length;
+  useEffect(() => {
+    setDatalist(list);
+    setCurrentItem(1);
+  }, [list]);
 
   const incrementItem = () => {
     if (currentItem + 1 !== TOTAL_ITEMS) {
@@ -18,20 +24,16 @@ function Carousel({ list }) {
       setCurrentItem((item) => item - 1);
     }
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.arrow} onClick={decrementItem}>
         {"<"}
       </div>
-      <div className={styles.item}>
-        {list[currentItem - 1]?.name || "No Item"}
-      </div>
-      <div className={`${styles.item} ${styles.centered}`}>
-        {list[currentItem].name}
-      </div>
-      <div className={styles.item}>
-        {list[currentItem + 1]?.name || "No Item"}
-      </div>
+      <CarouselItem data={dataList[currentItem - 1]} />
+      <CarouselMain data={dataList[currentItem]} />
+      <CarouselItem data={dataList[currentItem + 1]} />
+
       <div className={styles.arrow} onClick={incrementItem}>
         {">"}
       </div>

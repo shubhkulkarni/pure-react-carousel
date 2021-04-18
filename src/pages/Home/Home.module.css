@@ -1,0 +1,9 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter {
+  margin-top: 10rem;
+}
