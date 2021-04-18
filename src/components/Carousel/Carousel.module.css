@@ -9,7 +9,7 @@
 
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 0 3rem;
-  opacity: 0.4;
+  opacity: 0.6;
   border-radius: 10px;
   overflow: hidden;
   background-image: linear-gradient(to right bottom, black, transparent);
@@ -19,6 +19,18 @@
 .info {
   background-color: rgba(0, 0, 0, 0.5);
   height: 5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoItem {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
   position: absolute;
   bottom: 0;
   width: 100%;

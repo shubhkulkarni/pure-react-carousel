@@ -4,7 +4,7 @@ function CarouselItem({ data, clickHandler }) {
   return data ? (
     <div className={styles.item} onClick={clickHandler}>
       <img src={data.image} className={styles.image} />
-      <div className={styles.info}>
+      <div className={styles.infoItem}>
         <div className={styles.title}>{data.name}</div>
 
         <div className={styles.price}>${data.price}</div>
