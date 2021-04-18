@@ -22,8 +22,20 @@ code {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   html {
-    font-size: 60%;
+    font-size: 30%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  html {
+    font-size: 75%;
   }
 }

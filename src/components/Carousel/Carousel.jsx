@@ -30,9 +30,15 @@ function Carousel({ list }) {
       <div className={styles.arrow} onClick={decrementItem}>
         {"<"}
       </div>
-      <CarouselItem data={dataList[currentItem - 1]} />
+      <CarouselItem
+        data={dataList[currentItem - 1]}
+        clickHandler={decrementItem}
+      />
       <CarouselMain data={dataList[currentItem]} />
-      <CarouselItem data={dataList[currentItem + 1]} />
+      <CarouselItem
+        data={dataList[currentItem + 1]}
+        clickHandler={incrementItem}
+      />
 
       <div className={styles.arrow} onClick={incrementItem}>
         {">"}

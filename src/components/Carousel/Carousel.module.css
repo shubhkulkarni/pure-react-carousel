@@ -6,6 +6,7 @@
 .item {
   height: 15rem;
   width: 20rem;
+
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 0 3rem;
   opacity: 0.4;
@@ -72,7 +73,8 @@
   cursor: pointer;
   /* animation: none; */
 }
-.leftItem:hover {
+.centered:hover {
+  transform: scale(3.05);
   /* animation: leftItemAnimation 2s ease-in-out; */
 }
 
@@ -117,12 +119,13 @@
   }
 }
 
-@keyframes leftItemAnimation {
-  from {
-    transform: translateX(0px);
+@media only screen and (max-width: 800px) {
+  .item {
+    display: none;
   }
-  to {
-    transform: translateX(120%) scale(2);
-    opacity: 1;
+  .item.centered {
+    display: block;
+    animation: none;
+    margin: unset;
   }
 }

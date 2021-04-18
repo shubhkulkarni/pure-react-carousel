@@ -12,7 +12,7 @@ function CarouselMain({ data }) {
         <div className={styles.priceCtr}>
           <div className={styles.price}>${data.price}</div>
           <div className={styles.rating}>
-            <span className={styles.ratingDesc}>rating:</span> 🌟🌟🌟🌟
+            <span className={styles.ratingDesc}>Rating:</span> 🌟🌟🌟🌟
           </div>
         </div>
       </div>
