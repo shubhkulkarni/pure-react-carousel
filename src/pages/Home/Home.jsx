@@ -17,6 +17,7 @@ const Home = () => {
       <div className={styles.filter}>
         <Filter list={filters} value={filterValue} onChange={onChange} />
       </div>
+      <div className={styles.tag}>Made with ❤️ by Shubham Kulkarni</div>
     </div>
   );
 };
