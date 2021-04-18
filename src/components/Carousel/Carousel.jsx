@@ -13,6 +13,18 @@ function Carousel({ list }) {
     setCurrentItem(1);
   }, [list]);
 
+  // for timely increment of slider
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (currentItem + 1 !== TOTAL_ITEMS) {
+  //       setCurrentItem((item) => item + 1);
+  //     } else {
+  //       setCurrentItem(1);
+  //     }
+  //   }, 4000);
+  // }, [currentItem]);
+
   const incrementItem = () => {
     if (currentItem + 1 !== TOTAL_ITEMS) {
       setCurrentItem((item) => item + 1);
