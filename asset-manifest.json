@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pure-react-carousel/static/css/main.7319101d.chunk.css",
+    "main.js": "/pure-react-carousel/static/js/main.4fc3c87d.chunk.js",
+    "main.js.map": "/pure-react-carousel/static/js/main.4fc3c87d.chunk.js.map",
+    "runtime-main.js": "/pure-react-carousel/static/js/runtime-main.4c9c7b0e.js",
+    "runtime-main.js.map": "/pure-react-carousel/static/js/runtime-main.4c9c7b0e.js.map",
+    "static/js/2.76e4b556.chunk.js": "/pure-react-carousel/static/js/2.76e4b556.chunk.js",
+    "static/js/2.76e4b556.chunk.js.map": "/pure-react-carousel/static/js/2.76e4b556.chunk.js.map",
+    "index.html": "/pure-react-carousel/index.html",
+    "static/css/main.7319101d.chunk.css.map": "/pure-react-carousel/static/css/main.7319101d.chunk.css.map",
+    "static/js/2.76e4b556.chunk.js.LICENSE.txt": "/pure-react-carousel/static/js/2.76e4b556.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c9c7b0e.js",
+    "static/js/2.76e4b556.chunk.js",
+    "static/css/main.7319101d.chunk.css",
+    "static/js/main.4fc3c87d.chunk.js"
+  ]
+}
