@@ -28,12 +28,16 @@ function Carousel({ list }) {
   const incrementItem = () => {
     if (currentItem + 1 !== TOTAL_ITEMS) {
       setCurrentItem((item) => item + 1);
+    } else {
+      setCurrentItem(0);
     }
   };
 
   const decrementItem = () => {
     if (currentItem > 0) {
       setCurrentItem((item) => item - 1);
+    } else {
+      setCurrentItem(TOTAL_ITEMS - 1);
     }
   };
 
@@ -43,12 +47,20 @@ function Carousel({ list }) {
         {"<"}
       </div>
       <CarouselItem
-        data={dataList[currentItem - 1]}
+        data={
+          currentItem === 0
+            ? dataList[TOTAL_ITEMS - 1]
+            : dataList[currentItem - 1]
+        }
         clickHandler={decrementItem}
       />
       <CarouselMain data={dataList[currentItem]} />
       <CarouselItem
-        data={dataList[currentItem + 1]}
+        data={
+          currentItem + 1 === TOTAL_ITEMS
+            ? dataList[0]
+            : dataList[currentItem + 1]
+        }
         clickHandler={incrementItem}
       />
 
